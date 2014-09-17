@@ -2,6 +2,7 @@
 <script src="filers.js" type="text/javascript"></script>
 <script src="contributor.js" type="text/javascript"></script>
 <script src="node-edge.js" type="text/javascript"></script>
+<script src="cleaner.js" type="text/javascript"></script>
 
 <html>
   <head>
@@ -13,20 +14,21 @@
   <body>
     <div id="alchemy" class="alchemy"></div>
 
-    <script type="text/javascript">
-      var nodeData = clean(starr);
-      var edgeData = edgeFormat(nodeData);
-      var graphData = {"nodes": nodeData, "edges": edgeData};
-      var config = {
-        dataSource: graphData,
-        nodeCaption: "contributor_payee",
-        linkDistance: 400
-        // },
-        // showEditor: true,
-        // showControlDash: true
-      };
-      alchemy.begin(config);
-      alchemy.updateGraph();
-    </script>
+    // <script type="text/javascript">
+         // var nodeData = graphify(starr)
+    //   var nodeData = clean(starr);
+    //   var edgeData = edgeFormat(nodeData);
+    //   var graphData = {"nodes": nodeData, "edges": edgeData};
+    //   var config = {
+    //     dataSource: graphData,
+    //     nodeCaption: "contributor_payee",
+    //     linkDistance: 400
+    //     // },
+    //     // showEditor: true,
+    //     // showControlDash: true
+    //   };
+    //   alchemy.begin(config);
+    //   alchemy.updateGraph();
+    // </script>
   </body>
 </html>
