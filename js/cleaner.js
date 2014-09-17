@@ -12,6 +12,7 @@ var clean = function(arr) {
   var indexer = 100001;
   arr.forEach(function(contribution){
     results.push ({"id": indexer,
+                  "node_type": "contributor",
                   "contributorName": contribution.contributor_payee,
                   "contributionAmount": contribution.amount,
                   "candidateID": contribution.filer_id
@@ -47,9 +48,12 @@ var clean = function(arr) {
 
   results.sort(compare);
 
-  console.log(grandTotal);
-
   results = results.slice(0,10);
+
+  for(var i = 0; i < results.length; i++){
+    results[i].contributionAmount = parseFloat(results[i].contributionAmount).toFixed(2);
+  };
+
   results.unshift(rootNode);
   return(results);
 }
