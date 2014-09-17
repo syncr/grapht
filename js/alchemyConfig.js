@@ -11,8 +11,7 @@ var config = {
                },
   nodeCaption: function(n) {
     if(n.nodeType === "candidate") {
-      return n.properties.candidateName
-      // + ": $" + n.properties.contributionAmount
+      return n.properties.candidateName + ": $" + n.properties.total
     } else if (n.nodeType === "contributor") {
       return n.properties.contributorName + ": $" + n.properties.contributionAmount
     }
@@ -22,7 +21,7 @@ var config = {
 
   nodeRadius: function(n) {
     if(n.node_type === "candidate") {
-      return (30)
+      return (n.total / 30000)
     } else if (n.node_type === "contributor") {
       return (n.contributionAmount / 3000)
     }
@@ -33,7 +32,7 @@ var config = {
   },
 
   edgeWidth: function(e, i) {
-    return (e.total * .0005)
+    return (10)
   },
 
   collisionDetection: true,

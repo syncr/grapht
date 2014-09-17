@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Mocha spec runner</title>
+  <link rel="stylesheet" href="mocha.css">
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="../js/alchemyConfig.js"></script>
+  <script src="../js/cleaner.js"></script>
+  <script src="test_data.js"></script>
+  <script src="test_data2.js"></script>
+  <script src="../js/node-edge.js"></script>
+  <script src="mocha.js"></script>
+  <script src="chai.js"></script>
+  <script>mocha.setup('bdd');</script>
+  <script src="specs.js"></script>
+  <script>
+    should = chai.should();
+    mocha.checkLeaks();
+    mocha.globals(['jQuery']);
+    mocha.run();
+  </script>
+</body>
+</html>
