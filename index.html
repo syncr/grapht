@@ -1,0 +1,32 @@
+
+<script src="filers.js" type="text/javascript"></script>
+<script src="contributor.js" type="text/javascript"></script>
+<script src="node-edge.js" type="text/javascript"></script>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="alchemy.min.css">
+    <script type="text/javascript" src="scripts/vendor.js"></script>
+    <script type="text/javascript" src="alchemy.min.js"></script>
+  </head>
+  <body>
+    <div id="alchemy" class="alchemy"></div>
+
+    <script type="text/javascript">
+      var nodeData = clean(starr);
+      var edgeData = edgeFormat(nodeData);
+      var graphData = {"nodes": nodeData, "edges": edgeData};
+      var config = {
+        dataSource: graphData,
+        nodeCaption: "contributor_payee",
+        linkDistance: 400
+        // },
+        // showEditor: true,
+        // showControlDash: true
+      };
+      alchemy.begin(config);
+      alchemy.updateGraph();
+    </script>
+  </body>
+</html>
