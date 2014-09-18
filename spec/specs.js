@@ -21,3 +21,24 @@ describe("clean", function() {
     clean(test_data)[0].node_type.should.equal("candidate");
   });
 });
+
+describe("edger", function() {
+  it("adds candidate node to edge", function() {
+    edger(clean(test_data))[0].source.should.equal(clean(test_data)[0].id)
+  });
+  it("adds contributor nodes to edge", function() {
+    edger(clean(test_data))[0].target.should.equal(clean(test_data)[1].id)
+  });
+  it("adds contributionAmount to edge", function() {
+    edger(clean(test_data))[0].total.should.equal(clean(test_data)[1].contributionAmount)
+  });
+});
+
+describe("node_edge", function() {
+  it("adds nodes to node_edge", function() {
+    node_edge(test_data).nodes.length.should.equal(11)
+  });
+  it("adds edges to node_edge", function() {
+    node_edge(test_data).edges.length.should.equal(10)
+  });
+});
