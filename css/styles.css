@@ -1,15 +1,33 @@
-#header {
-  height: 100px;
-  width: 100%;
+body {
   background: #333; }
 
-#container {
+#header {
+  height: 150px;
+  width: 100%;
+  background: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+#alchemy-container {
   height: 100vh;
   margin: 0 auto; }
 
 #alchemy, .alchemy, element.style {
   height: 100vh;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #333; }
 
 #control-dash {
   display: none; }
+
+#logo-background {
+  height: 5em; }
+
+#logo-text {
+  margin-left: 1em;
+  font-family: "Questrial", sans-serif;
+  font-size: 5em;
+  padding-bottom: 1em;
+  letter-spacing: -0.1em; }

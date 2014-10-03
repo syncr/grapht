@@ -3,7 +3,7 @@ var config = {
   dataSource: node_edge(starr),
 
   cluster: true,
-  graphHeight: function(){ return 900; },
+  graphHeight: function(){ return 800; },
   graphWidth: function(){ return 900; },
 
   nodeTypes: {"node_type":

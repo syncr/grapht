@@ -1,15 +1,44 @@
-#header
-  height: 100px
-  width: 100%
-  background: #333
+$light-grey: #777
+$dark-grey: #333
+$red-pink: #FF003C
+$holland-orange: #FF8A00
+$yellow: #FABE28
+$light-green: #88C100
+$dark-green: #00C176
 
-#container
+body
+  background: $dark-grey
+
+#header
+  height: 150px
+  width: 100%
+  background: $dark-grey
+  color: white
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
+
+#alchemy-container
   height: 100vh
   margin: 0 auto
 
 #alchemy, .alchemy, element.style
   height: 100vh
   margin: 0 auto
+  background: $dark-grey
+
 
 #control-dash
   display: none
+
+#logo-background
+  height: 5em
+
+#logo-text
+  margin-left: 1em
+  font-family: 'Questrial', sans-serif
+  font-size: 5em
+  padding-bottom: 1em
+  letter-spacing: -0.1em
