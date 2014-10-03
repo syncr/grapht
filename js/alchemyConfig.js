@@ -1,7 +1,10 @@
+var vh = 'vh';
 var config = {
   dataSource: node_edge(starr),
 
   cluster: true,
+  graphHeight: function(){ return 900; },
+  graphWidth: function(){ return 900; },
 
   nodeTypes: {"node_type":
                 [
